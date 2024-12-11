@@ -16,6 +16,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous">
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://use.typekit.net/tui0fks.css">
   </head>
 
   <body>
@@ -26,7 +27,7 @@
       <!--Greeting and Instruction-->
     <div class="container">
     <div class="text-center mb-4">
-      <h1>Whats Your Bridgerton Name</h1>
+      <h1>Whats Your Bridgerton Name?</h1>
       <p>Fill out the form and we shall see!</p>
 
        <!--Form-->
@@ -59,10 +60,11 @@
 
     <!--Gender-->
     <div class="mb-3">
-      <label for="roadType" class="form"> Choose Your Gender</label>
-    <select id="roadType" class="form-select">
-      <option value="road">Female</option>
-      <option value="road">Male</option>
+      <label for="genderType" class="form"> Choose Your Gender</label>
+    <select id="genderType" class="form-select">
+      <option value="gender">Female</option>
+      <option value="gender">Male</option>
+      </select>
     </div>
 
     <!--Favorite Color-->
@@ -78,7 +80,7 @@
     </div>
 
     <!--Button-->
-    <button class="button-56" role="button">Button 56</button>
+    <button class="button-56 w-100" role="button" onclick="genFullName()">Name</button>
     </form>
 
 
