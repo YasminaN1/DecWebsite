@@ -8,7 +8,7 @@ function genPrefix(firstName){
 }
 
 //generate first name of name
-function genFirstName(firstName){
+function genFirstName(firstName, genderType){
    const firstLetter = firstName.charAt(0).toLowerCase()
    if (firstLetter === 'a'){
     return 'Jeff'
@@ -24,7 +24,7 @@ function genFirstName(firstName){
 }
 
 //generate middle name
-function getMiddleName(roadType, favoriteColor){
+function genMiddleName(roadType, favoriteColor){
     if (roadType === 'road'){
         return `${favoriteColor} ridge`
     }else if (roadType === 'street'){
@@ -38,7 +38,7 @@ function getMiddleName(roadType, favoriteColor){
 }
 
 //generate last name
-function getlastName (lastName){
+function genlastName (lastName){
     const lastLetter = lastName.charAt(lastName.length-1).toLowerCase()
     if(lastLetter === 'a'){
         return 'Shadow'
@@ -54,7 +54,7 @@ function getlastName (lastName){
         }
 }
 //generate suffix 
-function getSuffix(favoriteAnimal){
+function genSuffix(favoriteAnimal){
     return `of the ${favoriteAnimal}`
 }
 
@@ -69,11 +69,29 @@ function genFullName(){
 
 //generate each part of the name using helper functions
 const prefix = genPrefix(firstName)
-const newFirstName = genFirstname(firstName)
-const newMiddleName = genMiddlenName(roadType, favoriteColor)
-const newLastName = genLastName(lastName)
+const newFirstName = genFirstName(firstName)
+const MiddleName = genMiddleName(roadType, favoriteColor)
+
+const newLastName = genlastName(lastName)
 const newSuffix = genSuffix(favoriteAnimal)
 
+//function to capatilize words
+const capitalizedPrefix = toCapitalize(prefix)
+const capitalizedNewFirstName = toCapitalize(newFirstName)
+const capitalizedMiddleName = toCapitalize(MiddleName)
+const capitalizedNewLastName = toCapitalize(newLastName)
+
+const fullName = `${capitalizedPrefix} ${capitalizedNewFirstName} ${capitalizedMiddleName} ${capitalizedNewLastName}`
+
+//For div from html
+document.getElementById("result").textContent = fullName
+}
+
+
+
+//capatilizer function
+function toCapitalize(word){
+    return word. charAt(0).toUpperCase() + word.slice().toLowerCase()
 }
 
 
