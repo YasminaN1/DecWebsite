@@ -69,14 +69,57 @@ function genFirstName(genderType, firstName) {
         return 'Amelia';
     } else if (genderType === 'female' && firstLetter === 'b') {
         return 'Beatrice';
-   
+    } else if (genderType === 'male' && firstLetter === 'c') {
+        return 'Charlotte';
+    } else if (genderType === 'male' && firstLetter === 'd') {
+        return 'Daphne';
+    } else if (genderType === 'male' && firstLetter === 'e') {
+        return 'Eleanor';
+    } else if (genderType === 'male' && firstLetter === 'f') {
+       return 'Francesca';
+    } else if (genderType === 'male' && firstLetter === 'g') {
+       return 'Genevieve';
+    } else if (genderType === 'male' && firstLetter === 'h') {
+        return 'Helena';
+    } else if (genderType === 'male' && firstLetter === 'i') {
+        return 'Isabella'; 
+    } else if (genderType === 'male' && firstLetter === 'j') {
+        return 'Josephine';
+    } else if (genderType === 'male' && firstLetter === 'k') {
+        return 'Katherine';
+    } else if (genderType === 'male' && firstLetter === 'l') {
+        return 'Lydia';
+    } else if (genderType === 'male' && firstLetter === 'm') {
+        return 'Margaret';
+    } else if (genderType === 'male' && firstLetter === 'n') {
+        return 'Nicolette';
+    } else if (genderType === 'male' && firstLetter === 'o') {
+        return 'Olivia';
+    } else if (genderType === 'male' && firstLetter === 'p') {
+        return 'Penelope';
+    } else if (genderType === 'male' && firstLetter === 'q') {
+        return 'Quintessa';
+    } else if (genderType === 'male' && firstLetter === 'r') {
+        return 'Rebecca';
+    } else if (genderType === 'male' && firstLetter === 's') {
+        return 'Sophia';
+    } else if (genderType === 'male' && firstLetter === 't') {
+        return 'Tessa';
+    } else if (genderType === 'male' && firstLetter === 'u') {
+        return 'Ursula';
+    } else if (genderType === 'male' && firstLetter === 'v') {
+        return 'Violet';
+    } else if (genderType === 'male' && firstLetter === 'w') {
+        return 'Wini';
+    } else if (genderType === 'male' && firstLetter === 'x') {
+        return 'Xerina';
+    } else if (genderType === 'male' && firstLetter === 'y') {
+        return 'Yelena';
     } else {
         return 'Zara';
     }
-} else {
-    return 'Alex'; // Default for non-binary or unspecified gender
-}
-}
+
+
 //generate middle name
 function genMiddleName(roadType, favoriteColor) {
     if (roadType === 'road') {
@@ -114,33 +157,34 @@ function genSuffix(favoriteAnimal) {
 }
 
 //master function to essemble full name
-function genFullName() {
-    const firstName = document.getElementById('firstName').value.trim()
-    const lastName = document.getElementById('lastName').value.trim()
-    const roadType = document.getElementById('roadType').value
-    const genderType = document.getElementById('genderType').value
-    const favoriteColor = document.getElementById('favoriteColor').value.trim()
-    const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
+function genFullName(){
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const roadType = document.getElementById('roadType').value;
+    const genderType = document.getElementById('genderType').value;
+    const favoriteColor = document.getElementById('favoriteColor').value.trim();
+    const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim();
 
-    //generate each part of the name using helper functions
-    const prefix = genPrefix(firstName)
-    const newFirstName = genFirstName(firstName)
-    const MiddleName = genMiddleName(roadType, favoriteColor)
 
-    const newLastName = genlastName(lastName)
-    const newSuffix = genSuffix(favoriteAnimal)
+    // Generate each part of the name
+    const prefix = genPrefix(firstName);
+    const newFirstName = genFirstName(genderType, firstName);
+    const middleName = genMiddleName(roadType, favoriteColor);
+    const newLastName = genLastName(lastName);
+    const newSuffix = genSuffix(favoriteAnimal);
 
-    //function to capatilize words
-    const capitalizedPrefix = toCapitalize(prefix)
-    const capitalizedNewFirstName = toCapitalize(newFirstName)
-    const capitalizedMiddleName = toCapitalize(MiddleName)
-    const capitalizedNewLastName = toCapitalize(newLastName)
+    // Capitalize each part
+    const capitalizedPrefix = toCapitalize(prefix);
+    const capitalizedNewFirstName = toCapitalize(newFirstName);
+    const capitalizedMiddleName = toCapitalize(middleName);
+    const capitalizedNewLastName = toCapitalize(newLastName);
 
-    const fullName = `${capitalizedPrefix} ${capitalizedNewFirstName} ${capitalizedMiddleName} ${capitalizedNewLastName}`
+    const fullName = `${capitalizedPrefix} ${capitalizedNewFirstName} ${capitalizedMiddleName} ${capitalizedNewLastName} ${newSuffix}`;
 
-    //For div from html
-    document.getElementById('result').textContent = fullName
+    // Display the result
+    document.getElementById('result').textContent = fullName;
 }
+
 
 
 
