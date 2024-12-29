@@ -86,3 +86,9 @@ p {
     padding: 0 40px;
   }
 }
+#result {
+  background-color: #fff;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+}

@@ -11,114 +11,116 @@ function genPrefix(firstName) {
 function genFirstName(genderType, firstName) {
     const firstLetter = firstName.charAt(0).toLowerCase();
 
-
-    if (genderType === 'male' && firstLetter === 'a') {
-        return 'Alexander';
-    } else if (genderType === 'male' && firstLetter === 'b') {
-        return 'Benedict';
-    } else if (genderType === 'male' && firstLetter === 'c') {
-        return 'Charles';
-    } else if (genderType === 'male' && firstLetter === 'd') {
-        return 'Dominic';
-    } else if (genderType === 'male' && firstLetter === 'e') {
-        return 'Edmund';
-    } else if (genderType === 'male' && firstLetter === 'f') {
-       return 'Frederick';
-    } else if (genderType === 'male' && firstLetter === 'g') {
-       return 'George';
-    } else if (genderType === 'male' && firstLetter === 'h') {
-        return 'Henry';
-    } else if (genderType === 'male' && firstLetter === 'i') {
-        return 'Isaac'; 
-    } else if (genderType === 'male' && firstLetter === 'j') {
-        return 'James';
-    } else if (genderType === 'male' && firstLetter === 'k') {
-        return 'Kenneth';
-    } else if (genderType === 'male' && firstLetter === 'l') {
-        return 'Laurence';
-    } else if (genderType === 'male' && firstLetter === 'm') {
-        return 'Miles';
-    } else if (genderType === 'male' && firstLetter === 'n') {
-        return 'Nathaniel';
-    } else if (genderType === 'male' && firstLetter === 'o') {
-        return 'Oliver';
-    } else if (genderType === 'male' && firstLetter === 'p') {
-        return 'Percival';
-    } else if (genderType === 'male' && firstLetter === 'q') {
-        return 'Quentin';
-    } else if (genderType === 'male' && firstLetter === 'r') {
-        return 'Richard';
-    } else if (genderType === 'male' && firstLetter === 's') {
-        return 'Sebastian';
-    } else if (genderType === 'male' && firstLetter === 't') {
-        return 'Theodore';
-    } else if (genderType === 'male' && firstLetter === 'u') {
-        return 'Ulysses';
-    } else if (genderType === 'male' && firstLetter === 'v') {
-        return 'Victor';
-    } else if (genderType === 'male' && firstLetter === 'w') {
-        return 'William';
-    } else if (genderType === 'male' && firstLetter === 'x') {
-        return 'Xavier';
-    } else if (genderType === 'male' && firstLetter === 'y') {
-        return 'York';
+    if (genderType === 'male') {
+        if (firstLetter === 'a') {
+            return 'Alexander';
+        } else if (firstLetter === 'b') {
+            return 'Benedict';
+        } else if (firstLetter === 'c') {
+            return 'Charles';
+        } else if (firstLetter === 'd') {
+            return 'Dominic';
+        } else if (firstLetter === 'e') {
+            return 'Edmund';
+        } else if (firstLetter === 'f') {
+           return 'Frederick';
+        } else if (firstLetter === 'g') {
+           return 'George';
+        } else if (firstLetter === 'h') {
+            return 'Henry';
+        } else if (firstLetter === 'i') {
+            return 'Isaac'; 
+        } else if (firstLetter === 'j') {
+            return 'James';
+        } else if (firstLetter === 'k') {
+            return 'Kenneth';
+        } else if (firstLetter === 'l') {
+            return 'Laurence';
+        } else if (firstLetter === 'm') {
+            return 'Miles';
+        } else if (firstLetter === 'n') {
+            return 'Nathaniel';
+        } else if (firstLetter === 'o') {
+            return 'Oliver';
+        } else if (firstLetter === 'p') {
+            return 'Percival';
+        } else if (firstLetter === 'q') {
+            return 'Quentin';
+        } else if (firstLetter === 'r') {
+            return 'Richard';
+        } else if (firstLetter === 's') {
+            return 'Sebastian';
+        } else if (firstLetter === 't') {
+            return 'Theodore';
+        } else if (firstLetter === 'u') {
+            return 'Ulysses';
+        } else if (firstLetter === 'v') {
+            return 'Victor';
+        } else if (firstLetter === 'w') {
+            return 'William';
+        } else if (firstLetter === 'x') {
+            return 'Xavier';
+        } else if (firstLetter === 'y') {
+            return 'York';
+        } else {
+            return 'Zachary';
+        }
     } else {
-        return 'Zachary';
+        if (firstLetter === 'a') {
+            return 'Amelia';
+        } else if (firstLetter === 'b') {
+            return 'Beatrice';
+        } else if (firstLetter === 'c') {
+            return 'Charlotte';
+        } else if (firstLetter === 'd') {
+            return 'Daphne';
+        } else if (firstLetter === 'e') {
+            return 'Eleanor';
+        } else if (firstLetter === 'f') {
+           return 'Francesca';
+        } else if (firstLetter === 'g') {
+           return 'Genevieve';
+        } else if (firstLetter === 'h') {
+            return 'Helena';
+        } else if (firstLetter === 'i') {
+            return 'Isabella'; 
+        } else if (firstLetter === 'j') {
+            return 'Josephine';
+        } else if (firstLetter === 'k') {
+            return 'Katherine';
+        } else if (firstLetter === 'l') {
+            return 'Lydia';
+        } else if (firstLetter === 'm') {
+            return 'Margaret';
+        } else if (firstLetter === 'n') {
+            return 'Nicolette';
+        } else if (firstLetter === 'o') {
+            return 'Olivia';
+        } else if (firstLetter === 'p') {
+            return 'Penelope';
+        } else if (firstLetter === 'q') {
+            return 'Quintessa';
+        } else if (firstLetter === 'r') {
+            return 'Rebecca';
+        } else if (firstLetter === 's') {
+            return 'Sophia';
+        } else if (firstLetter === 't') {
+            return 'Tessa';
+        } else if (firstLetter === 'u') {
+            return 'Ursula';
+        } else if (firstLetter === 'v') {
+            return 'Violet';
+        } else if (firstLetter === 'w') {
+            return 'Wini';
+        } else if (firstLetter === 'x') {
+            return 'Xerina';
+        } else if (firstLetter === 'y') {
+            return 'Yelena';
+        } else {
+            return 'Zara';
+        }    
     }
-} if (genderType === 'female' && firstLetter === 'a') {
-        return 'Amelia';
-    } else if (genderType === 'female' && firstLetter === 'b') {
-        return 'Beatrice';
-    } else if (genderType === 'male' && firstLetter === 'c') {
-        return 'Charlotte';
-    } else if (genderType === 'male' && firstLetter === 'd') {
-        return 'Daphne';
-    } else if (genderType === 'male' && firstLetter === 'e') {
-        return 'Eleanor';
-    } else if (genderType === 'male' && firstLetter === 'f') {
-       return 'Francesca';
-    } else if (genderType === 'male' && firstLetter === 'g') {
-       return 'Genevieve';
-    } else if (genderType === 'male' && firstLetter === 'h') {
-        return 'Helena';
-    } else if (genderType === 'male' && firstLetter === 'i') {
-        return 'Isabella'; 
-    } else if (genderType === 'male' && firstLetter === 'j') {
-        return 'Josephine';
-    } else if (genderType === 'male' && firstLetter === 'k') {
-        return 'Katherine';
-    } else if (genderType === 'male' && firstLetter === 'l') {
-        return 'Lydia';
-    } else if (genderType === 'male' && firstLetter === 'm') {
-        return 'Margaret';
-    } else if (genderType === 'male' && firstLetter === 'n') {
-        return 'Nicolette';
-    } else if (genderType === 'male' && firstLetter === 'o') {
-        return 'Olivia';
-    } else if (genderType === 'male' && firstLetter === 'p') {
-        return 'Penelope';
-    } else if (genderType === 'male' && firstLetter === 'q') {
-        return 'Quintessa';
-    } else if (genderType === 'male' && firstLetter === 'r') {
-        return 'Rebecca';
-    } else if (genderType === 'male' && firstLetter === 's') {
-        return 'Sophia';
-    } else if (genderType === 'male' && firstLetter === 't') {
-        return 'Tessa';
-    } else if (genderType === 'male' && firstLetter === 'u') {
-        return 'Ursula';
-    } else if (genderType === 'male' && firstLetter === 'v') {
-        return 'Violet';
-    } else if (genderType === 'male' && firstLetter === 'w') {
-        return 'Wini';
-    } else if (genderType === 'male' && firstLetter === 'x') {
-        return 'Xerina';
-    } else if (genderType === 'male' && firstLetter === 'y') {
-        return 'Yelena';
-    } else {
-        return 'Zara';
-    }
-
+} 
 
 //generate middle name
 function genMiddleName(roadType, favoriteColor) {
@@ -128,7 +130,6 @@ function genMiddleName(roadType, favoriteColor) {
         return `${favoriteColor}son`
     } else if (roadType === 'ave') {
         return `${favoriteColor}field`
-
     } else {
         return `${favoriteColor}stone`
     }
@@ -182,7 +183,7 @@ function genFullName(){
     const fullName = `${capitalizedPrefix} ${capitalizedNewFirstName} ${capitalizedMiddleName} ${capitalizedNewLastName} ${newSuffix}`;
 
     // Display the result
-    document.getElementById('result').textContent = fullName;
+    document.getElementById('result').innerHTML = fullName;
 }
 
 

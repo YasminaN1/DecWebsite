@@ -14,9 +14,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://use.typekit.net/tui0fks.css">
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tui0fks.css" />
   </head>
 
   <body>
@@ -25,72 +26,91 @@
     </header>
     <main>
       <!--Greeting and Instruction-->
-    <div class="container">
-    <div class="text-center mb-4">
-      <h1>Whats Your Bridgerton Name?</h1>
-      <p>Fill out the form and we shall see!</p>
+      <div class="container">
+        <div class="text-center mb-4">
+          <h1>Whats Your Bridgerton Name?</h1>
+          <p>Fill out the form and we shall see!</p>
 
-       <!--Form-->
+          <!--Form-->
 
+          <!--First Name-->
+          <form id="FantasyForm" class="mb-4" onsubmit="return false;">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="Enter Your First Name"
+              />
+            </div>
 
-       <!--First Name-->
-<form id="FantasyForm class="mb-4">
-  <div class="mb-3">
-    <label for="firstName" class="form-label">First Name</label>
-    <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
-  </div>
+            <!--Last Name-->
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder="Enter Your Last Name"
+              />
+            </div>
 
-  <!--Last Name-->
-    <div class="mb-3">
-      <label for="lastName" class="form-label">Last Name</label>
-      <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
-    </div>
+            <!--Get Road Type-->
+            <div class="mb-3">
+              <label for="roadType" class="form"> Choose Road Type</label>
+              <select id="roadType" class="form-select">
+                <option value="road">Terrace</option>
+                <option value="road">Court</option>
+                <option value="road">Street</option>
+                <option value="road">Avenue</option>
+                <option value="road">Other</option>
+              </select>
+            </div>
 
-    <!--Get Road Type-->
-    <div class="mb-3">
-      <label for="roadType" class="form"> Choose Road Type</label>
-    <select id="roadType" class="form-select">
-      <option value="road">Terrace</option>
-      <option value="road">Court</option>
-      <option value="road">Street</option>
-      <option value="road">Avenue</option>
-      <option value="road">Other</option>
-    </select>
-    </div>
+            <!--Gender-->
+            <div class="mb-3">
+              <label for="genderType" class="form"> Choose Your Gender</label>
+              <select id="genderType" class="form-select">
+                <option value="gender">Female</option>
+                <option value="gender">Male</option>
+              </select>
+            </div>
 
-    <!--Gender-->
-    <div class="mb-3"> 
-      <label for="genderType" class="form"> Choose Your Gender</label> 
-      <select id="genderType" class="form-select"> 
-      <option value="gender">Female</option> 
-      <option value="gender">Male</option> 
-    </select>
-    </div>
+            <!--Favorite Color-->
+            <div class="mb-3">
+              <label for="favoriteColor" class="form-label">Fav Color</label>
+              <input
+                type="text"
+                class="form-control"
+                id="favoriteColor"
+                placeholder="Enter Your Fav Color"
+              />
+            </div>
 
-    <!--Favorite Color-->
-    <div class="mb-3">
-      <label for="favoriteColor" class="form-label">Fav Color</label>
-      <input type="text" class="form-control" id="favoriteColor" placeholder="Enter Your Fav Color">
-    </div>
+            <!--Favorite Animal-->
+            <div class="mb-3">
+              <label for="favoriteAnimal" class="form-label">Fav Animal</label>
+              <input
+                type="text"
+                class="form-control"
+                id="favoriteAnimal"
+                placeholder="Enter Your Fav Animal"
+              />
+            </div>
 
-    <!--Favorite Animal-->
-    <div class="mb-3"></div>
-      <label for="favoriteAnimal" class="form-label">Fav Animal</label>
-      <input type="text" class="form-control" id="favoriteAnimal" placeholder="Enter Your Fav Animal">
-    </div>
-
-    <!--Button-->
-    <div class="button-56 w-100" role="button" onclick="genFullName()">Name</div>
-    </form>
-    <div id="result"> 
-
-
-    </div>
-
-
-    </div>
-    </div>
-
+            <!--Button-->
+            <button
+              class="button-56 w-100"
+              role="button"
+              onclick=" genFullName()"
+            >
+              Name
+            </button>
+          </form>
+          <div id="result"></div>
+        </div>
+      </div>
     </main>
     <footer>
       <!-- place footer here -->
@@ -107,6 +127,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"> </script>
+    <script src="script.js"></script>
   </body>
 </html>
