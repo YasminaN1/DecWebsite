@@ -1,14 +1,17 @@
 //generate prefix of name
 function genPrefix(genderType, firstName) {
-    if (genderType === 'male') {
-        //
+  if (genderType === "male") {
+    if (firstName.length > 4) {
+      return "Lord";
     } else {
-        //
+      return "Count";
     }
-  if (firstName.length > 4) {
-    return "The Great";
   } else {
-    return "Master";
+    if (firstName.length > 4) {
+      return "Lady";
+    } else {
+      return "Countess";
+    }
   }
 }
 
@@ -70,7 +73,8 @@ function genFirstName(genderType, firstName) {
     } else {
       return "Zachary";
     }
-  } else { // female
+  } else {
+    // female
     if (firstLetter === "a") {
       return "Amelia";
     } else if (firstLetter === "b") {
@@ -128,19 +132,19 @@ function genFirstName(genderType, firstName) {
 }
 
 //generate middle name
-function genMiddleName(roadType, favoriteColor) {
-  if (roadType === "terrace") {
-    return `${favoriteColor} terrace`;
-  } else if (roadType === "street") {
-    return `${favoriteColor}son`;
-  } else if (roadType === "ave") {
-    return `${favoriteColor}field`;
-  } else if (roadType === "court") {
-    return `${favoriteColor}court`;
-  } else if (roadType === "other") {
-    return `${favoriteColor}other`;
+function genMiddleName(iceCream, favoriteSeason) {
+  if (iceCream === "Gingerbread Fable") {
+    return `${favoriteSeason}smith`;
+  } else if (iceCream === "Lavender & Honey Tincture") {
+    return `${favoriteSeason}son`;
+  } else if (iceCream === "Elderflower Cream") {
+    return `${favoriteSeason}field`;
+  } else if (iceCream === "Jasmine Blossom") {
+    return `${favoriteSeason}berg`;
+  } else if (iceCream === "other") {
+    return `${favoriteSeason}man`;
   } else {
-    return `${favoriteColor}stone`;
+    return `${favoriteSeason}wick`;
   }
 }
 
@@ -148,39 +152,41 @@ function genMiddleName(roadType, favoriteColor) {
 function genLastName(lastName) {
   const lastLetter = lastName.charAt(lastName.length - 1).toLowerCase();
   if (lastLetter === "a") {
-    return "Shadow";
+    return "Lockhart";
   } else if (lastLetter === "e") {
-    return "Storm";
+    return "Hastings";
   } else if (lastLetter === "i") {
-    return "Blaze";
+    return "Pembroke";
   } else if (lastLetter === "o") {
-    return "Thorn";
+    return "Ellington";
   } else if (lastLetter === "u") {
-    return "Frost";
+    return "Hawthorne";
   } else {
-    return "Moon";
+    return "Davenport";
   }
 }
 //generate suffix
-function genSuffix(favoriteAnimal) {
-  return `of the ${favoriteAnimal}`;
+function genSuffix(favoriteCountry) {
+  return `of ${favoriteCountry}`;
 }
 
 //master function to essemble full name
 function genFullName() {
   const firstName = document.getElementById("firstName").value.trim();
   const lastName = document.getElementById("lastName").value.trim();
-  const roadType = document.getElementById("roadType").value;
+  const iceCream = document.getElementById("iceCream").value;
   const genderType = document.getElementById("genderType").value;
-  const favoriteColor = document.getElementById("favoriteColor").value.trim();
-  const favoriteAnimal = document.getElementById("favoriteAnimal").value.trim();
+  const favoriteSeason = document.getElementById("favoriteSeason").value.trim();
+  const favoriteCountry = document
+    .getElementById("favoriteCountry")
+    .value.trim();
 
   // Generate each part of the name
-  const prefix = genPrefix(genderType,firstName);
+  const prefix = genPrefix(genderType, firstName);
   const newFirstName = genFirstName(genderType, firstName);
-  const middleName = genMiddleName(roadType, favoriteColor);
+  const middleName = genMiddleName(iceCream, favoriteSeason);
   const newLastName = genLastName(lastName);
-  const newSuffix = genSuffix(favoriteAnimal);
+  const newSuffix = genSuffix(favoriteCountry);
 
   // Capitalize each part
   const capitalizedPrefix = toCapitalize(prefix);
