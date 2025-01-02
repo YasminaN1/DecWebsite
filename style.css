@@ -1,37 +1,31 @@
 body {
-  background-image: url(imgs/Bridgerton\ Room.png);
+  background-image: url("https://www.lionheartwallpaper.com/cdn/shop/files/LAN100017-1-WALLPAPER_1445x.webp?v=1697434092");
   background-size: cover;
   background-repeat: no-repeat;
 }
-h1 {
-  font-family: "krul", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 30px;
-  font-size: 100px;
-}
+
 p {
-  font-family: "filmotype-honey", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 50px;
-}
-.form-label {
   font-family: "krul", sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 30px;
 }
+.form-label {
+  font-family: "amandine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
 .form {
-  font-family: "krul", sans-serif;
-  font-weight: 300;
+  font-family: "amandine", sans-serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 30px;
 }
 
 .button-56 {
   align-items: center;
-  background-color: #b0e3f7;
+  background-color: #81a2b0;
   border: 2px solid #111;
   border-radius: 8px;
   box-sizing: border-box;
@@ -87,8 +81,69 @@ p {
   }
 }
 #result {
-  background-color: #fff;
-  position: absolute;
-  width: 500px;
-  height: 50px;
+  font-family: "krul", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  width: 100%;
+  text-shadow: 1px 5px 3px rgb(94, 183, 252);
+}
+
+
+/*Start of title animation*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "krul", sans-serif;
+  margin-top:30px;
+  font-size:100px;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }

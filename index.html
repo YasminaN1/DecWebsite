@@ -28,9 +28,20 @@
       <!--Greeting and Instruction-->
       <div class="container">
         <div class="text-center mb-4">
-          <h1>Whats Your Bridgerton Name?</h1>
+          <h1>
+            <span>Whats</span>
+            <span>Your</span>
+            <span>Bridgerton</span>
+            <span>Name</span>
+            <span>?</span>
+          </h1>
           <p>Fill out the form and we shall see!</p>
 
+          <div class="row">
+            <div class="col">
+              <div id="result"></div>
+            </div>
+          </div>
           <!--Form-->
 
           <!--First Name-->
@@ -42,6 +53,7 @@
                 class="form-control"
                 id="firstName"
                 placeholder="Enter Your First Name"
+                required
               />
             </div>
 
@@ -53,13 +65,14 @@
                 class="form-control"
                 id="lastName"
                 placeholder="Enter Your Last Name"
+                required
               />
             </div>
 
             <!--Get Ice Cream-->
             <div class="mb-3">
               <label for="iceCream" class="form"> Choose Fav Ice Cream</label>
-              <select id="iceCream" class="form-select">
+              <select id="iceCream" class="form-select" required>
                 <option value="">Choose An Ice Cream Flavor</option>
                 <option value="Gingerbread Fable">Gingerbread Fable</option>
                 <option value="Lavender & Honey Tincture">
@@ -74,7 +87,7 @@
             <!--Gender-->
             <div class="mb-3">
               <label for="genderType" class="form"> Choose Your Gender</label>
-              <select id="genderType" class="form-select">
+              <select id="genderType" class="form-select" required>
                 <option value="">Choose Your Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
@@ -89,6 +102,7 @@
                 class="form-control"
                 id="favoriteSeason"
                 placeholder="Enter Your Fav Season"
+                required
               />
             </div>
 
@@ -102,6 +116,7 @@
                 class="form-control"
                 id="favoriteCountry"
                 placeholder="Enter Your Fav Country"
+                required
               />
             </div>
 
@@ -114,7 +129,6 @@
               Name
             </button>
           </form>
-          <div id="result"></div>
         </div>
       </div>
     </main>
